@@ -1,3 +1,4 @@
+// loading animation aniamtion ---------
 function OnButtonClick(e){
   e.target.classList.add("loading");
   e.target.innerHTML = "生成中<div class='loading-dots'>...</div>";
@@ -15,3 +16,19 @@ var loadAnimation = function(){
     loading.append(span);
   });
 }
+
+
+window.onload = (event) => {
+  // background animation ---------
+  const target = document.querySelector('input[type="text"]');
+  const gradient_canvas = document.querySelector('#gradient-canvas');
+
+  target.addEventListener('focus', (event) => {
+    gradient_canvas.style.opacity = '0.4';
+  });
+
+  target.addEventListener('blur', (event) => {
+    gradient_canvas.style.opacity = '0';
+  });
+};
+

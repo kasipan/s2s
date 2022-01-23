@@ -7,7 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="../assets/css/main.css">
-    <script src="../assets/js/main.js" defer=""></script>
+    
+    <script src="../assets/js/main.js" ></script>
   </head>
   <body>
     <header class="header">
@@ -35,8 +36,20 @@
           <li>新装オープンした和風ホテルのラウンジ</li>
           <li>きれいな生ゴミ</li>
       </div>
-    </main>
 
+
+      <script type="module">
+        import { Gradient } from '../assets/js/Gradient.js'
+
+        // Create your instance
+        const gradient = new Gradient();
+
+        // Call `initGradient` with the selector to your canvas
+        gradient.initGradient('#gradient-canvas');
+      </script>
+      <canvas id="gradient-canvas" data-transition-in></canvas>
+
+    </main>
 
   </body>
 </html>
