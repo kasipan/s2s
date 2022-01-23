@@ -24,7 +24,7 @@ window.onload = (event) => {
   const gradient_canvas = document.querySelector('#gradient-canvas');
 
   target.addEventListener('focus', (event) => {
-    gradient_canvas.style.opacity = '0.4';
+    gradient_canvas.style.opacity = '0.25';
   });
 
   target.addEventListener('blur', (event) => {

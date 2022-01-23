@@ -66,7 +66,7 @@ body {
 
 .form-wrapper {
   width: 860px;
-  margin: 204px auto 254px;
+  margin: 204px auto 184px;
   display: flex;
   justify-content: space-between;
 }
@@ -209,7 +209,7 @@ body {
   --gradient-color-4: #21e892;
 
   opacity: 0;
-  filter: blur(5px);
+  filter: blur(8px);
   transition: 1s opacity ease-out;
 }
 
