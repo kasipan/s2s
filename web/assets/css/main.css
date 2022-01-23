@@ -1,0 +1,189 @@
+/* Common Settings ----------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+body {
+  color: #707070;
+}
+
+
+/* Header Area Settings ----------------------- */
+.header {
+  height: 60px;
+  width: 100%;
+  padding-top: 15px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.7;
+}
+
+.header-logo {
+  margin: -10px 0 0 10px;
+  width: 113px;
+}
+
+.header-nav {
+  display: inline-flex;
+  margin: 0 10px 0 0;
+}
+
+.header-nav-link {
+  display: block;
+  margin-left: 18px;
+  padding: 9px 18px;
+  background: rgba(240, 240, 240);
+  border-radius: 27px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #707070;
+  text-decoration: none;
+}
+
+.howToUse-icon {
+  width: 22px;
+  font-style: normal;
+  display: inline-block;
+  background: #fff;
+  border-radius: 22px;
+  text-align: center;
+  font-size: 90%;
+  margin-right: 6px;
+  font-weight: 400;
+}
+
+
+/* Main Area Common Settings ----------------------- */
+.main {
+  margin-bottom: 100px;
+}
+
+
+.form-wrapper {
+  width: 860px;
+  margin: 204px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-text-wrapper {
+  width: 640px;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.input-text {
+  font-size: 24px;
+  padding: 20px 17px 20px 17px;
+  outline: 0;
+  border: none;
+  width: 100%;
+  color: #707070;
+}
+
+.input-text::placeholder {
+  color: #B7B7B7;
+  opacity: 1;
+}
+
+.button {
+  width: 188px;
+  height: 78px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #ffffff;
+  background: #696262;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: #707070;
+  background: #ffffff;
+  border: 1px solid #707070;
+}
+
+.button-generate:before {
+  content: "";
+  background-color: #ffffff;
+  display: inline-block;
+  height: 29px;
+  width: 29px;
+  -webkit-mask: url("../img/icon_pen.svg");
+  mask: url("../img/icon_pen.svg");
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  vertical-align: middle;
+  margin: -7px 7px 0 0;
+}
+
+.button-generate:hover:before {
+  background-color: #707070;
+}
+
+.loading {
+  color: #707070;
+  background: #ffffff;
+  border: 1px solid #707070;
+  padding-left: 14px;
+}
+
+.loading:hover {
+  cursor: default;
+}
+
+.loading:before {
+  margin: -7px 7px 0 -10px;
+  background-color: #707070;
+}
+
+.loading-dots {
+  display: inline-flex;
+  margin-left: 2px;
+  vertical-align: bottom;
+}
+.loading-dots span {
+  padding-left: 2px;
+  animation: bulge 3s infinite;
+}
+
+
+@keyframes bulge {
+  33% {
+    transform: translateY(-5px);
+  }
+  66% {
+    transform: translateY(0px);
+  }
+}
+
+
+/* Common Settings ----------------------- */
+.hint-wrapper {
+  width: 860px;
+  margin: 0 auto;
+  padding: 56px 42px;
+  text-align: center;
+  line-height: 2.0;
+  background: rgba(255, 255, 255, .7);
+}
+
+.hint-samples {
+  line-height: 1.5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hint-samples li::before {
+  content: "・";
+}
