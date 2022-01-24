@@ -60,7 +60,7 @@ body {
 
 /* Main Area Common Settings ----------------------- */
 .main {
-  margin-bottom: 100px;
+  
 }
 
 
@@ -69,6 +69,7 @@ body {
   margin: 204px auto 184px;
   display: flex;
   justify-content: space-between;
+  opacity: 0.75;
 }
 
 .input-text-wrapper {
@@ -114,6 +115,10 @@ body {
 
 
 /* Form Screen Settings ----------------------- */
+.button-generate {
+  background: #595252;    /*base 696262*/
+}
+
 .button-generate:before {
   content: "";
   background-color: #FFFFFF;
@@ -128,13 +133,17 @@ body {
   margin: -7px 7px 0 0;
 }
 
+.button-generate:hover {
+  background: #B3AFAF;    /*base C3BFBF*/
+}
+
 .button-generate:hover:before {
   background-color: #FFFFFF;
 }
 
 .loading {
   color: #FFFFFF;
-  background: #C3BFBF;
+  background: #B3AFAF;  /*base C3BFBF*/
   border: 1px solid #FFFFFF;
   padding-left: 14px;
 }
@@ -173,13 +182,14 @@ body {
 
 .hint-wrapper {
   width: 860px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   padding: 30px;
   text-align: center;
   line-height: 2.0;
   background: rgba(255, 255, 255, .7);
   border-radius: 10px;
   font-size: 16px;
+  color: #a0a0a0;
 }
 
 .hint-samples {
@@ -216,3 +226,84 @@ body {
   transition: 1s opacity ease-out;
 }
 
+
+
+/* My Story Screen Settings ----------------------- */
+.myStory-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 720px;
+  margin: 100px auto 330px;
+  padding: 45px 25px;
+  line-height: 2em;
+}
+
+.myStory-header {
+  width: 80%;
+  padding: 0 0px 15px;
+  border-bottom: 1px solid #707070;
+  text-align: center;
+} 
+
+.myStory-header .myStory-title {
+  font-size: 24px;
+}
+
+.myStory-body {
+  font-size: 18px;
+} 
+
+.myStory-image {
+  width: 80px;
+  height: 80px;
+  /*margin-top: 50px;*/
+}
+
+.link-scrollToBottom {
+  position: absolute;
+  top: 900px;
+  left: 50%;
+  display: inline-block;
+  height: 60px;
+  color: #a0a0a0;
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+
+.link-scrollToBottom:before {
+  content: ">";
+
+}
+
+
+.mixStoriesIntro-wrapper {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 1080px;
+}
+
+.othersStories-wrapper {
+  display: block;
+  width: 100%;
+  height: 1080px;
+  background: #F0EFEF;
+  z-index: -999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mixStoriesIntro-description {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 620px;
+  height: 1080px;
+  z-index: 999;
+  text-align: center;
+  background: #ffffff;
+}

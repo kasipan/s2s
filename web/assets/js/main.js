@@ -1,3 +1,13 @@
+import { Gradient } from './Gradient.js'
+
+// Create your instance
+const gradient = new Gradient();
+
+// Call `initGradient` with the selector to your canvas
+gradient.initGradient('#gradient-canvas');
+
+
+
 // loading animation aniamtion ---------
 function OnButtonClick(e){
   e.target.classList.add("loading");
@@ -20,15 +30,17 @@ var loadAnimation = function(){
 
 window.onload = (event) => {
   // background animation ---------
-  const target = document.querySelector('input[type="text"]');
+  const form_input = document.querySelector('input[type="text"]');
   const gradient_canvas = document.querySelector('#gradient-canvas');
 
-  target.addEventListener('focus', (event) => {
-    gradient_canvas.style.opacity = '0.25';
-  });
+  if(form_input){ 
+    form_input.addEventListener('focus', (event) => {
+      gradient_canvas.style.opacity = '0.25';
+    });
 
-  target.addEventListener('blur', (event) => {
-    gradient_canvas.style.opacity = '0';
-  });
+    form_input.addEventListener('blur', (event) => {
+      gradient_canvas.style.opacity = '0';
+    });
+  }
 };
 
