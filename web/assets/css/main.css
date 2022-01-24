@@ -73,7 +73,7 @@ body {
 
 .input-text-wrapper {
   width: 640px;
-  border: 1px solid #A7A7A7;
+  border: 1px solid #C7C7C7;
   border-radius: 10px;
   background: #fff;
   overflow: hidden;
@@ -99,22 +99,24 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 300;
   font-size: 24px;
-  color: #ffffff;
+  color: #FFFFFF;
   background: #696262;
   border-radius: 10px;
-  border: 1px solid #ffffff;
+  border: 1px solid #FFFFFF;
 }
 
 .button:hover {
   cursor: pointer;
-  color: #707070;
-  background: #ffffff;
-  border: 1px solid #707070;
+  color: #FFFFFF;
+  background: #C3BFBF;
+  border: 1px solid #FFFFFF;
 }
 
+
+/* Form Screen Settings ----------------------- */
 .button-generate:before {
   content: "";
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   display: inline-block;
   height: 29px;
   width: 29px;
@@ -127,13 +129,13 @@ body {
 }
 
 .button-generate:hover:before {
-  background-color: #707070;
+  background-color: #FFFFFF;
 }
 
 .loading {
-  color: #707070;
-  background: #ffffff;
-  border: 1px solid #707070;
+  color: #FFFFFF;
+  background: #C3BFBF;
+  border: 1px solid #FFFFFF;
   padding-left: 14px;
 }
 
@@ -143,7 +145,7 @@ body {
 
 .loading:before {
   margin: -7px 7px 0 -10px;
-  background-color: #707070;
+  background-color: #FFFFFF;
 }
 
 .loading-dots {
@@ -151,6 +153,7 @@ body {
   margin-left: 2px;
   vertical-align: bottom;
 }
+
 .loading-dots span {
   padding-left: 2px;
   animation: bulge 3s infinite;
@@ -167,7 +170,7 @@ body {
 }
 
 
-/* Form Screen Settings ----------------------- */
+
 .hint-wrapper {
   width: 860px;
   margin: 0 auto;
