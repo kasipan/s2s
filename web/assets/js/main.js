@@ -43,6 +43,14 @@ window.onload = (event) => {
     });
   }
 
+  // for others' stories animation --------
+  const stories_columns = document.querySelectorAll('.othersStories-column');
+  if(stories_columns){
+    stories_columns.forEach((stories_element) => {
+      let loopSetClone = stories_element.querySelector('.loopSet').cloneNode(true);
+      stories_element.appendChild(loopSetClone);
+    });
+  }
 
 
 };
