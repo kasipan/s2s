@@ -7,6 +7,10 @@
   font-size: 18px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #707070;
 }
@@ -69,7 +73,7 @@ body {
   margin: 204px auto 184px;
   display: flex;
   justify-content: space-between;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 
 .input-text-wrapper {
@@ -236,7 +240,7 @@ body {
   align-items: center;
   width: 400px;
   height: 720px;
-  margin: 100px auto 330px;
+  margin: 50px auto 200px;
   padding: 45px 25px;
   line-height: 2em;
 }
@@ -252,7 +256,7 @@ body {
   font-size: 24px;
 }
 
-.myStory-body {
+.myStory-body * {
   font-size: 18px;
 } 
 
@@ -267,15 +271,36 @@ body {
   top: 900px;
   left: 50%;
   display: inline-block;
-  height: 60px;
-  color: #a0a0a0;
+  height: 50px;
+  color: #D7D7D7;
   text-decoration: none;
   transform: translateX(-50%);
 }
 
 .link-scrollToBottom:before {
-  content: ">";
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 34.5px;
+  height: 0.5px;
+  background-color: #D7D7D7;;
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(30deg);
+}
 
+.link-scrollToBottom:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 34.5px;
+  height: 0.5px;
+  background-color: #D7D7D7;;
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-30deg);
 }
 
 
@@ -283,27 +308,212 @@ body {
   display: block;
   width: 100%;
   position: relative;
-  height: 1080px;
+  height: 1060px;
 }
 
+
+/* Others' Stories Area Settings */
 .othersStories-wrapper {
-  display: block;
-  width: 100%;
-  height: 1080px;
-  background: #F0EFEF;
-  z-index: -999;
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #F0EFEF;
+  z-index: -999;
+  opacity: 0.4;
+  overflow: hidden;
 }
 
+.othersStories-board {
+  position: absolute;
+  top: -50.25px;
+  left: -68.25px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transform: rotate(45deg);
+}
+
+.othersStories-column {
+  display: flex;
+  flex-direction: column;
+  
+  width: 275px;
+  margin: 0 32px;  
+}
+
+
+
+.othersStory-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 275px;
+  height: 455px;
+  margin-bottom: 64px;
+  padding: 50px 25px;
+  line-height: 1.3em;
+  background: #ffffff;
+}
+
+.othersStory-header {
+  width: 80%;
+  padding: 0 0px 6px;
+  border-bottom: 1px solid #707070;
+  text-align: center;
+} 
+
+.othersStory-header .othersStory-title {
+  font-size: 16px;
+}
+
+.othersStory-body * {
+  font-size: 12px;
+} 
+
+.othersStory-image {
+  width: 57px;
+  height: 57px;
+  /*margin-top: 50px;*/
+}
+
+
+.stream-slow .loopSet:first-child {
+  animation: streamLoop-slow-1 50s -25s linear infinite;
+}
+
+.stream-slow .loopSet:last-child {
+  animation: streamLoop-slow-2 50s linear infinite;
+}
+
+
+@keyframes streamLoop-slow-1 {
+  0% {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes streamLoop-slow-2 {
+  0% {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.stream-normal .loopSet:first-child {
+  animation: streamLoop-normal-1 100s -50s linear infinite;
+}
+
+.stream-normal .loopSet:last-child {
+  animation: streamLoop-normal-2 100s linear infinite;
+}
+
+
+.stream-normal:nth-child(odd) .loopSet:first-child {
+  animation: streamLoop-normal-1 100s -75s linear infinite;
+}
+
+.stream-normal:nth-child(odd) .loopSet:last-child {
+  animation: streamLoop-normal-2 100s -25s linear infinite;
+}
+
+
+@keyframes streamLoop-normal-1 {
+  0% {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes streamLoop-normal-2 {
+  0% {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+
+.stream-long .loopSet:first-child {
+  animation: streamLoop-long-1 133.3s -66.5s linear infinite;
+}
+
+.stream-long .loopSet:last-child {
+  animation: streamLoop-long-2 133.3s linear infinite;
+}
+
+.stream-long:nth-child(odd) .loopSet:first-child {
+  animation: streamLoop-long-1 133.3s -66.5s linear infinite;
+}
+
+.stream-long:nth-child(odd) .loopSet:last-child {
+  animation: streamLoop-long-2 133.3s -33.25s linear infinite;
+}
+
+@keyframes streamLoop-long-1 {
+  0% {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes streamLoop-long-2 {
+  0% {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+
+
+/* Mix Stories Introduction Area Settings */
 .mixStoriesIntro-description {
   position: absolute;
   top: 0;
   right: 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
   width: 620px;
-  height: 1080px;
+  height: 100%;
   z-index: 999;
   text-align: center;
   background: #ffffff;
+}
+
+.mixStoriesIntro-description-text {
+  font-size: 24px;
+  margin: 110px auto;
+}
+
+.button-mix {
+  background: #696262
+}
+
+.button-mix {
+  background: #696262
+}
+
+.button-mix:hover {
+  background: #C3BFBF;
+}
+
+
+.button-mix.loading {
+  background: #C3BFBF;
 }

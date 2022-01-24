@@ -42,5 +42,9 @@ window.onload = (event) => {
       gradient_canvas.style.opacity = '0';
     });
   }
+
+
+
 };
+
 
