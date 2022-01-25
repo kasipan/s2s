@@ -41,8 +41,8 @@ body {
 .header-nav-link {
   display: block;
   margin-left: 18px;
-  padding: 6px 14px;
-  background: rgba(250, 250, 250);
+  padding: 6px 18px;
+  background: rgba(247, 247, 247);
   border-radius: 27px;
   font-size: 16px;
   font-weight: 300;
@@ -60,6 +60,7 @@ body {
   font-size: 90%;
   margin-right: 8px;
   font-weight: 300;
+  opacity: 0.9;
 }
 
 
