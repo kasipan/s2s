@@ -108,7 +108,7 @@ body {
   background: #696262;
   border-radius: 10px;
   border: 1px solid #FFFFFF;
-  transition: all 0.4s;
+  transition: color 0.4s, background 0.4s, border 0.4s;
 }
 
 .button:hover {
