@@ -36,10 +36,10 @@
             clickable: true,
           },
           // 前後スライドボタンを表示
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
+          // navigation: {
+          //   nextEl: ".swiper-button-next",
+          //   prevEl: ".swiper-button-prev",
+          // },
           loop: true, // ループの有効化
 
           effect: "fade",
@@ -50,7 +50,7 @@
       </script>
 
       <div class="myStories-wrapper">
-        <div class="carousel">
+        <div class="carousel no-print">
           <div class="swiper-container">
             <div class="swiper-wrapper">
               <!-- Slides -->
@@ -93,7 +93,9 @@
           </div><!-- Slider main container -->
         </div><!-- /carousel -->
 
-        <button class="button button-print no-print" onClick="window.print();" >印刷する</button>
+        <button class="button button-print no-print" onClick="PrintButtonClick(event);" >印刷する</button>
+        <article class="myStory-wrapper myStory-wrapper-print"></article><!-- /DOM for printing -->
+
       </div><!-- /myStories-wrapper -->
 
 

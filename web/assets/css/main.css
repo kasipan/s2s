@@ -108,7 +108,7 @@ body {
   background: #696262;
   border-radius: 10px;
   border: 1px solid #FFFFFF;
-  transition: color 0.4s, background 0.4s, border 0.4s;
+  transition: color 0.35s, background 0.35s, border 0.35s;
 }
 
 .button:hover {
@@ -525,6 +525,15 @@ body {
 
 
 /* Mixed Stories Screen Settings ----------------- */
+:root {
+  --swiper-navigation-color: #F0EFEF;
+  --swiper-pagination-color: #707070;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+}
+
 .myStories-wrapper {
 }
 
@@ -537,40 +546,12 @@ body {
   position: relative;
   overflow: hidden;
 }
-/*.item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 640px;
-  text-align: center;
-  color: #ccc;
-  font-size: 32px;
-  font-weight: bold;
-}
-.item__blue {
-  background: rgb(68 174 255);
-}
-
-.item__yellow {
-  background: rgb(255 213 27);
-  color: #585858;
-}*/
-
 
 .myStories-wrapper .myStory-wrapper {
   margin-bottom: 40px;
   margin-top: 0px;
   width: 387px;
   height: 640px;
-}
-
-:root {
-  --swiper-navigation-color: #F0EFEF;
-  --swiper-pagination-color: #707070;
-  --swiper-pagination-bullet-size: 8px;
-  --swiper-pagination-bullet-width: 8px;
-  --swiper-pagination-bullet-height: 8px;
-  --swiper-pagination-bullet-horizontal-gap: 6px;
 }
 
 .myStory-storyType {
@@ -586,6 +567,10 @@ body {
   margin: 30px auto 50px;
 }
 
+.myStory-wrapper-print {
+  display: none;
+}
+
 .othersStories-backcover {
   display: block;
   width: 100%;
@@ -593,16 +578,26 @@ body {
   height: 1060px;
 }
 
+/* Settings for printing */
 @media print {
   .header, .header, .othersStories-backcover, .no-print {
     display: none;
   }
-/*  *:not(.print-area) {
-    display: none;
+
+  body {
+    /*width: 200px;*/
   }
 
-  .print-area .swiper-slide-active {
-    display: block;
+  .myStory-wrapper-print {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
   }
-*/  
+
+  .myStory-wrapper-print .myStory-wrapper {
+    margin: 0;
+    padding: 60px 20px 0;
+  }
+
 }

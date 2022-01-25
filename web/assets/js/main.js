@@ -9,7 +9,7 @@
 
 
 // loading animation aniamtion ---------
-function OnButtonClick(e){
+function GenerateButtonClick(e){
   e.target.classList.add("loading");
   e.target.innerHTML = "生成中<div class='loading-dots'>...</div>";
   loadAnimation();
@@ -53,4 +53,15 @@ window.onload = (event) => {
   }
 };
 
+
+function PrintButtonClick(e){
+  const print_target = document.querySelector('.swiper-slide-active .myStory-wrapper');
+  const print_wrapper = document.querySelector('.myStory-wrapper-print');
+  if(print_target && print_wrapper){
+    let storyClone = print_target.cloneNode(true);
+    print_wrapper.textContent = '';
+    print_wrapper.insertAdjacentElement('afterbegin', storyClone);
+    window.print();
+  }
+}
 
