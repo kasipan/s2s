@@ -51,8 +51,6 @@ window.onload = (event) => {
       stories_element.appendChild(loopSetClone);
     });
   }
-
-
 };
 
 

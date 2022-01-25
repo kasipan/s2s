@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize-css@2.3.1/normalize.css">
     <link rel="stylesheet" href="../assets/css/main.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
+  
     <script src="../assets/js/main.js" ></script>
 
     <title>Scent2Story</title>
@@ -26,23 +26,79 @@
 
 
     <main class="main">
-      <article class="myStory-wrapper">
-        <header class="myStory-header">
-          <h2 class="myStory-title">レモンの白い</h2>
-        </header>
-        <section class="myStory-body">
-          <p>
-            彼は不必要に喋らないのだ。 目の円を描き始めた。 こういってなぐさめました。 マルコはいたい足をたさしくつかんだ。 結局、マストの先のナイフを縛った。 が、太陽をしっかり結びつけた。
-            彼は不必要に喋らないのだ。 目の円を描き始めた。 こういってなぐさめました。 マルコはいたい足をたさしくつかんだ。 結局、マストの先のナイフを縛った。
-          </p>
-        </section>
-        <img class="myStory-image" src="../assets/img/story_pic_sample02.png" >
-      </article>
+      <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
-      <a class="link-scrollToBottom js-scrollToBottom" href="#mixStoriesIntro">SCROLL</a>
-      
+        const swiper = new Swiper(".swiper-container", {
+          // ドットインジケーターの表示
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          // 前後スライドボタンを表示
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          loop: true, // ループの有効化
 
-      <!-- Introduction to mixing stories-->
+          effect: "fade",
+          fadeEffect: {
+            crossFade: true
+          },
+        });
+      </script>
+
+      <div class="myStories-wrapper">
+        <div class="carousel">
+          <div class="swiper-container">
+            <div class="swiper-wrapper print-area">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <article class="myStory-wrapper">
+                  <header class="myStory-header">
+                    <p class="myStory-storyType">-&nbsp;&nbsp;あなたとみんなを混ぜたストーリー&nbsp;&nbsp;-</p>
+                    <h2 class="myStory-title">合成レモンの白い</h2>
+                  </header>
+                  <section class="myStory-body">
+                    <p>
+                      彼は不必要に喋らないのだ。 目の円を描き始めた。 こういってなぐさめました。 マルコはいたい足をたさしくつかんだ。 結局、マストの先のナイフを縛った。 が、太陽をしっかり結びつけた。
+                      彼は不必要に喋らないのだ。 目の円を描き始めた。 こういってなぐさめました。 マルコはいたい足をたさしくつかんだ。 結局、マストの先のナイフ。
+                    </p>
+                  </section>
+                  <img class="myStory-image" src="../assets/img/story_pic_sample04.png" >
+                </article>
+              </div>
+
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <article class="myStory-wrapper">
+                  <header class="myStory-header">
+                    <p class="myStory-storyType">-&nbsp;&nbsp;あなたのストーリー&nbsp;&nbsp;-</p>
+                    <h2 class="myStory-title">おれのレモンの白い</h2>
+                  </header>
+                  <section class="myStory-body">
+                    <p>
+                      彼は不必要に喋らないのだ。 目の円を描き始めた。 こういってなぐさめました。 マルコはいたい足をたさしくつかんだ。 結局、マストの先のナイフを縛った。 が、太陽をしっかり結びつけた。
+                      彼は不必要に喋らないのだ。 目の円を描き始めた。 こういってなぐさめました。 マルコはいたい足をたさしくつかんだ。 結局、マストの先のナイフ。
+                    </p>
+                  </section>
+                  <img class="myStory-image" src="../assets/img/story_pic_sample02.png" >
+                </article>
+              </div>
+              <div class="swiper-pagination"></div>
+
+            </div><!-- /swiper-wrapper -->
+            
+
+          </div><!-- Slider main container -->
+        </div><!-- /carousel -->
+
+        <button class="button button-print" onClick="window.print();" >印刷する</button>
+      </div><!-- /myStories-wrapper -->
+
+
+      <!-- Others' Stories Stream -->
       <div id="mixStoriesIntro" class="mixStoriesIntro-wrapper">
         <div class="othersStories-wrapper">
           <div class="othersStories-board">
@@ -280,19 +336,8 @@
             <!-- / 5th column-->
 
           </div> <!-- othersStories-board -->
-
         </div> <!-- othersStories-wrapper -->
 
-        <div class="mixStoriesIntro-description">
-          <p class="mixStoriesIntro-description-text">
-            みんなのストーリーと掛け合わせて<br>
-            より香りの世界の濃い<br>
-            ストーリーも生成できます
-          </p>
-          <form>
-            <button class="button button-generate button-mix" onclick="OnButtonClick(event);">合成する</button>
-          </from>
-        </div>
       </div>
     </main>
 
