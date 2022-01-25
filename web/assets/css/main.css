@@ -108,6 +108,7 @@ body {
   background: #696262;
   border-radius: 10px;
   border: 1px solid #FFFFFF;
+  transition: all 0.4s;
 }
 
 .button:hover {
@@ -385,7 +386,7 @@ body {
 }
 
 
-.stream-slow .loopSet:first-child {
+/*.stream-slow .loopSet:first-child {
   animation: streamLoop-slow-1 50s -25s linear infinite;
 }
 
@@ -411,7 +412,7 @@ body {
     transform: translateY(0%);
   }
 }
-
+*/
 .stream-normal .loopSet:first-child {
   animation: streamLoop-normal-1 100s -50s linear infinite;
 }
@@ -449,7 +450,7 @@ body {
 }
 
 
-.stream-long .loopSet:first-child {
+/*.stream-long .loopSet:first-child {
   animation: streamLoop-long-1 133.3s -66.5s linear infinite;
 }
 
@@ -482,7 +483,7 @@ body {
     transform: translateY(0%);
   }
 }
-
+*/
 
 
 /* Mix Stories Introduction Area Settings */
@@ -585,8 +586,15 @@ body {
   margin: 30px auto 50px;
 }
 
+.othersStories-backcover {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 1060px;
+}
+
 @media print {
-  .no-print {
+  .header, .header, .othersStories-backcover, .no-print {
     display: none;
   }
 /*  *:not(.print-area) {
