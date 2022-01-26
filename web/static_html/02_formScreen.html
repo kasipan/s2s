@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     
     <script src="../assets/js/main.js" ></script>
+    <script src="../assets/js/WebSocket.js" ></script>
 
     <title>Scent2Story</title>
   </head>
@@ -30,6 +31,9 @@
         <div class="input-text-wrapper">
           <input class="input-text" type="text" placeholder="香りと紐づくあなたの体験やイメージを書いてください">
         </div>
+
+        <input id="input-scentType" type="hidden" name="scentType" value="">
+        
         <button class="button button-generate" onclick="GenerateButtonClick(event);">生成する</button>
       </form>
       
@@ -40,6 +44,7 @@
           <li>小さいころ好きだった図工室の木材の匂い</li>
           <li>新装オープンした和風ホテルのラウンジ</li>
           <li>きれいな生ゴミ</li>
+        </ul>
       </div>
 
 
