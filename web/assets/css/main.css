@@ -25,7 +25,7 @@ body {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .header-logo {
@@ -126,11 +126,12 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 300px auto 200px;
+  margin: 200px auto 200px;
 }
 
 .title-logo {
-  
+  width: 346px;
+  margin: 0 auto 50px;
 }
 
 .title-description {
@@ -153,7 +154,7 @@ body {
 
 /* Form Screen Settings ----------------------- */
 .button-generate {
-  background: #595252;    /*base 696262*/
+  background: #4c4444;    /*base 696262*/
 }
 
 .button-generate:before {
