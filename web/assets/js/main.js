@@ -10,7 +10,7 @@
 
 // loading animation aniamtion ---------
 function GenerateButtonClick(e){
-  e.target.classList.add("loading");
+  e.target.classList.add("is-loading");
   e.target.innerHTML = "生成中<div class='loading-dots'>...</div>";
   loadAnimation();
 }
@@ -63,5 +63,12 @@ function PrintButtonClick(e){
     print_wrapper.insertAdjacentElement('afterbegin', storyClone);
     window.print();
   }
+}
+
+
+function UsageToggleClick(e){
+  e.preventDefault();
+  const target_modal = document.querySelector('.modal-howToUse');
+  target_modal.classList.toggle("is-activeModal");
 }
 

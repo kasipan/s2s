@@ -20,7 +20,7 @@
       <a href="/"><img class="header-logo" src="../assets/img/logo_s2s.png"></a>
 
       <nav class="header-nav">
-        <a class="header-nav-link howToUse" href="#"><i class="howToUse-icon">？</i>使い方</a>
+        <a class="header-nav-link howToUse" href="#" onclick="UsageToggleClick(event);"><i class="howToUse-icon">？</i>使い方</a>
         <a class="header-nav-link restart" href="/">はじめから</a>
       </nav>
     </header>
@@ -60,6 +60,56 @@
       <canvas id="gradient-canvas" data-transition-in></canvas>
 
     </main>
+
+
+    <div class="modal-howToUse">
+      <h3 class="howToUse-title">使い方</h3>
+      <div class="howToUse-description">
+        <ol>
+          <li class="howToUse-step">
+            タイトル画面のはじめるボタンから開始してください。
+            <p class="howToUse-notes">※ 利用開始前にソロスペースの明かりが点いているか確認してください。</p>
+          </li>
+
+          <li class="howToUse-step">
+            机の上に２種類の香りがついた封筒があります。お好きな香りの方から１枚カードを取ってください。<br>
+          </li>
+
+          <li class="howToUse-step">
+            香りから思い起こされるシーンや体験を入力します。<br>
+            生成ボタンを押してしばらく待つと、物語と挿絵が生成されます。
+          </li>
+
+          <li class="howToUse-step">
+            読み終えた後、画面に従って先に進んでください。<br>
+            同じ香りを選んだ他の人のストーリーと掛け合わせた合成ストーリーも生成できます。
+          </li>
+
+          <li class="howToUse-step">
+            生成されたあなたのストーリー／合成ストーリーを手元の香り付きカードに印刷できます。<br>
+            印刷したい方を選んで印刷ボタンを押します。カードを右手のプリンターの背面差込口に入れてください。
+            <p class="howToUse-notes">
+              ※プリンター画面に「用紙がなくなりました」と表示されたら、紙をセットした後プリンター上部のOKボタンを押してください。
+            </p>
+          </li>
+          <li class="howToUse-step">
+            最後に画面上部のボタンからタイトル画面に戻ってください。
+          </li>
+        </ol>
+      </div>
+
+      <div class="contact-wrapper">
+        <h4 class="contact-title">連絡先</h4>
+        <p class="contact-description">
+          Slackにて@Yu Kato / @Shodai Kayama まで、または<br>
+          加藤優　　yuup.psy@gmail.com / 080-6893-0697（緊急用）<br>
+          加山晶大　k.shodai.0011@gmail.com / 080-5316-4248（緊急用）
+        </p>
+      </div>
+
+      <a href="#" class="button modal-button-close" onclick="UsageToggleClick(event);"></a>
+    </div><!-- /modal -->
+
 
   </body>
 </html>

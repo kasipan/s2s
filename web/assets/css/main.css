@@ -179,18 +179,18 @@ body {
   background-color: #FFFFFF;
 }
 
-.loading {
+.is-loading {
   color: #FFFFFF;
   background: #B3AFAF;  /*base C3BFBF*/
   border: 1px solid #FFFFFF;
   padding-left: 14px;
 }
 
-.loading:hover {
+.is-loading:hover {
   cursor: default;
 }
 
-.loading:before {
+.is-loading:before {
   margin: -7px 7px 0 -10px;
   background-color: #FFFFFF;
 }
@@ -253,7 +253,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -9999;
+  z-index: -999;
   --gradient-color-1: #54f2b6; 
   --gradient-color-2: #00d647; 
   --gradient-color-3: #ffffff;  
@@ -322,9 +322,8 @@ body {
   bottom: 0;
   display: inline-block;
   width: 34.5px;
-  height: 0.5px;
-  background-color: #D7D7D7;;
-  -webkit-transform: rotate(-60deg);
+  height: 1px;
+  background-color: #D7D7D7;
   transform: rotate(30deg);
 }
 
@@ -335,9 +334,8 @@ body {
   bottom: 0;
   display: inline-block;
   width: 34.5px;
-  height: 0.5px;
-  background-color: #D7D7D7;;
-  -webkit-transform: rotate(-60deg);
+  height: 1px;
+  background-color: #D7D7D7;
   transform: rotate(-30deg);
 }
 
@@ -552,7 +550,7 @@ body {
   background: #C3BFBF;
 }
 
-.button-mix.loading {
+.button-mix.is-loading {
   background: #C3BFBF;
 }
 
@@ -635,3 +633,95 @@ body {
 
 }
 
+
+/* Modal Window Settings ----------------- */
+.modal-howToUse {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #F0EFEF;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1000;
+  opacity: 0;
+  transition: opacity 0.5s, z-index 0.5s;
+}
+
+.modal-howToUse.is-activeModal {
+  z-index: 9999;
+  opacity: 1;
+}
+
+.howToUse-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.howToUse-description {
+  width: 980px;
+  margin: 20px auto;
+}
+
+.howToUse-step {
+  margin: 1.5em 0;
+  padding-left: 1em;
+  line-height: 1.7;
+}
+
+.howToUse-notes {
+  font-size: 14px;
+}
+
+.contact-wrapper {
+
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-size: 14px;
+}
+
+.modal-button-close {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 60px auto 0px;
+  padding: 20px;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 50%;
+  text-decoration: none;
+}
+
+.modal-button-close:before {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: 50%;
+  display: inline-block;
+  width: 50%;
+  height: 1px;
+  background-color: #FFF;
+  transform: rotate(45deg);
+}
+
+.modal-button-close:after {
+  content: '';
+  position: absolute;
+  right: 25%;
+  bottom: 50%;
+  display: inline-block;
+  width: 50%;
+  height: 1px;
+  background-color: #FFF;
+  transform: rotate(-45deg);
+}
