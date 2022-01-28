@@ -254,11 +254,11 @@ body {
   left: 0;
   z-index: -999;
   /*transform: scale(2.0) translate(-25%, -25%);*/
-  --gradient-color-1: #54f2b6;
+  /*--gradient-color-1: #54f2b6;
   --gradient-color-2: #00d647;
   --gradient-color-3: #21e892;
-  --gradient-color-4: #ffffff;
-
+  --gradient-color-4: #ffffff;*/
+  
   /*opacity: 0;
   transition: 1s opacity ease-out;
   */
