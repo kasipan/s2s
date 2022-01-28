@@ -89,7 +89,7 @@ body {
   outline: 0;
   border: none;
   width: 100%;
-  color: #707070;
+  color: #505050;
 }
 
 .input-text::placeholder {
@@ -254,16 +254,28 @@ body {
   left: 0;
   z-index: -999;
   /*transform: scale(2.0) translate(-25%, -25%);*/
-  --gradient-color-1: #54f2b6; 
-  --gradient-color-2: #00d647; 
-  --gradient-color-3: #ffffff;  
-  --gradient-color-4: #21e892;
+  --gradient-color-1: #54f2b6;
+  --gradient-color-2: #00d647;
+  --gradient-color-3: #21e892;
+  --gradient-color-4: #ffffff;
 
-  opacity: 0;
-  filter: blur(8px);
+  /*opacity: 0;
   transition: 1s opacity ease-out;
+  */
+  filter: blur(8px);
+
 }
 
+.canvas-cover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -888;
+
+  background: rgba(255, 255, 255, .7);
+}
 
 
 /* My Story Screen Settings ----------------------- */

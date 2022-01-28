@@ -1,8 +1,8 @@
 /*
+ * Master code communicating between esp32 and web browser via web socket
+ * 2022.01.28 edition
+ * 
  * based on WebSocketServer.ino
- *
- *  from esp32 to web test
- *
  */
 #include <Arduino.h>
 
