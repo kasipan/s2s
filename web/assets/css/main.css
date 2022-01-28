@@ -711,8 +711,13 @@ body {
     display: none;
   }
 
+  html {
+    transform: scale(0.5);
+    transform-origin: 10px 20px;
+    height: 0px;
+  }
+
   body {
-    /*width: 200px;*/
   }
 
   .myStory-wrapper-print {
