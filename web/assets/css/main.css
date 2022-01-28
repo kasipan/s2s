@@ -85,7 +85,7 @@ body {
 
 .input-text {
   font-size: 24px;
-  padding: 20px 17px 20px 17px;
+  padding: 24px 17px 20px 17px;
   outline: 0;
   border: none;
   width: 100%;
@@ -254,11 +254,11 @@ body {
   left: 0;
   z-index: -999;
   /*transform: scale(2.0) translate(-25%, -25%);*/
-  /*--gradient-color-1: #54f2b6;
-  --gradient-color-2: #00d647;
-  --gradient-color-3: #21e892;
-  --gradient-color-4: #ffffff;*/
-  
+  --gradient-color-1: #ffffff;
+  --gradient-color-2: #ffffff;
+  --gradient-color-3: #ffffff;
+  --gradient-color-4: #ffffff;
+
   /*opacity: 0;
   transition: 1s opacity ease-out;
   */
@@ -571,17 +571,17 @@ body {
 :root {
   --swiper-navigation-color: #F0EFEF;
   --swiper-pagination-color: #707070;
-  --swiper-pagination-bullet-size: 8px;
-  --swiper-pagination-bullet-width: 8px;
-  --swiper-pagination-bullet-height: 8px;
-  --swiper-pagination-bullet-horizontal-gap: 6px;
+  --swiper-pagination-bullet-size: 11px;
+  --swiper-pagination-bullet-width: 11px;
+  --swiper-pagination-bullet-height: 11px;
+  --swiper-pagination-bullet-horizontal-gap: 8px;
 }
 
 .myStories-wrapper {
 }
 
 .myStories-wrapper .carousel {
-  height: 680px;
+  height: 690px;
   margin-top: 40px;
 }
 
