@@ -43,7 +43,7 @@ function connect(){
   };
 
   connection.onmessage = function (e) {  
-    console.log(e.data);
+    //console.log(e.data);
     var scentData = e.data;
     
     if(is_json(scentData)) {
@@ -54,7 +54,6 @@ function connect(){
       if(current_scent != prev_scent && current_scent != "default") {
         document.getElementById(INPUT_ELEMENT).value = current_scent;   // update the value in input element
         
-        console.log('CIE-4: ', lights_cie[4]);
         // style update based on lights_cie
         var target = document.getElementById(CANVAS_ELEMENT);
         var hexArray = [];
@@ -63,7 +62,6 @@ function connect(){
           var x = jsonObj[current_scent][l][0];
           var y = jsonObj[current_scent][l][1];
           var rgbArray = String(cie_to_rgb(x, y)).split(',');
-          console.log(rgbArray);
           hexArray.push( ConvertRGBtoHex(parseInt(rgbArray[0]), parseInt(rgbArray[1]), parseInt(rgbArray[2])) );
         }
         // let style = window.getComputedStyle(target);
