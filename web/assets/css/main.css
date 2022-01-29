@@ -721,12 +721,14 @@ body {
 @media print {
   .header, .header, .othersStories-backcover, .no-print, .modal-howToUse {
     display: none;
+    margin: 0;
+    padding: 0;
   }
 
   html {
     transform: scale(0.5);
-    transform-origin: 10px 20px;
-    height: 0px;
+    transform-origin: 14px 10px;
+    height: 300px;
   }
 
   body {
@@ -739,9 +741,9 @@ body {
     padding: 0;
   }
 
-  .myStory-wrapper-print .myStory-wrapper {
+  .myStory-wrapper-print.myStory-wrapper {
     margin: 0;
-    padding: 60px 20px 20px;
+    padding: 50px 20px 30px;
   }
 
 }
