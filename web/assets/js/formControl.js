@@ -715,29 +715,38 @@ function connect(){
 
       if(current_scent != prev_scent && current_scent != "default") {
         document.getElementById(INPUT_ELEMENT).value = current_scent;   // update the value in input element
-        
-        // style update based on lights_cie
-        var target = document.getElementById(CANVAS_ELEMENT);
-        var hexArray = [];
 
-        for (var l in lights_cie) {
-          var x = jsonObj[current_scent][l][0];
-          var y = jsonObj[current_scent][l][1];
-          var rgbArray = String(cie_to_rgb(x, y)).split(',');
-          hexArray.push( ConvertRGBtoHex(parseInt(rgbArray[0]), parseInt(rgbArray[1]), parseInt(rgbArray[2])) );
-        }
-        // let style = window.getComputedStyle(target);
-        // let value = style.getPropertyValue('--gradient-color-1');
-        // console.log(value);
+        // Cover background temporarily
+        const canvas_cover = document.querySelector('.canvas-cover');
+        canvas_cover.classList.add('is-changing');
 
-        target.style.setProperty('--gradient-color-1', hexArray[0]);
-        target.style.setProperty('--gradient-color-2', hexArray[1]);
-        target.style.setProperty('--gradient-color-3', hexArray[2]);
-        target.style.setProperty('--gradient-color-4', "#ffffff"); 
+        // 1sec waiting
+        sleep(1, function () {
+          // style update based on lights_cie
+          const target = document.getElementById(CANVAS_ELEMENT);
+          var hexArray = [];
 
-        gradient.init();  // update gradient canvas background
+          for (var l in lights_cie) {
+            var x = jsonObj[current_scent][l][0];
+            var y = jsonObj[current_scent][l][1];
+            var rgbArray = String(cie_to_rgb(x, y)).split(',');
+            hexArray.push( ConvertRGBtoHex(parseInt(rgbArray[0]), parseInt(rgbArray[1]), parseInt(rgbArray[2])) );
+          }
+          // let style = window.getComputedStyle(target);
+          // let value = style.getPropertyValue('--gradient-color-1');
+          // console.log(value);
 
-        prev_scent = current_scent;   // update prev_scent
+          target.style.setProperty('--gradient-color-1', hexArray[0]);
+          target.style.setProperty('--gradient-color-2', hexArray[1]);
+          target.style.setProperty('--gradient-color-3', hexArray[2]);
+          target.style.setProperty('--gradient-color-4', "#ffffff"); 
+
+          gradient.init();  // update gradient canvas background
+
+          canvas_cover.classList.remove('is-changing');
+
+          prev_scent = current_scent;   // update prev_scent
+        });
       }
     }
   };
@@ -779,4 +788,25 @@ function ColorToHex(color) {
 
 function ConvertRGBtoHex(red, green, blue) {
   return "#" + ColorToHex(red) + ColorToHex(green) + ColorToHex(blue);
+}
+
+
+
+
+function sleep(waitSec, callbackFunc) {
+  // 経過時間（秒）
+  var spanedSec = 0;
+  // 1秒間隔で無名関数を実行
+  var id = setInterval(function () {
+    spanedSec++;
+    // 経過時間 >= 待機時間の場合、待機終了。
+    if (spanedSec >= waitSec) {
+      // タイマー停止
+      clearInterval(id);
+
+      // 完了時、コールバック関数を実行
+      if (callbackFunc) callbackFunc();
+    }
+  }, 1000);
+
 }

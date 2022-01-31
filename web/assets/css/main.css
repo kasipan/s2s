@@ -28,7 +28,7 @@ body {
 
 .header-logo {
   margin: 0;
-  width: 240px;
+  width: 220px;
 }
 
 .header-nav {
@@ -39,7 +39,7 @@ body {
 
 .header-nav-link {
   display: block;
-  margin-right: 16px;
+  margin-right: 12px;
   padding: 6px 18px;
   background: rgba(247, 247, 247);
   border-radius: 27px;
@@ -48,18 +48,32 @@ body {
   color: #707070;
   text-decoration: none;
   opacity: 0.8;
+  transition: color 0.2s, background 0.2s;
+}
+
+.header-nav-link.howToUse {
+  padding-left: 14px;
+}
+
+.header-nav-link:hover {
+  color: #FFFFFF;
+  background: #C3BFBF;
 }
 
 .howToUse-icon {
-  width: 22px;
+  width: 19px;
   font-style: normal;
   display: inline-block;
-  background: #fff;
-  border-radius: 22px;
+  background: #ffffff;
+  border-radius: 9.5px;
   text-align: center;
-  font-size: 90%;
-  margin-right: 8px;
+  font-size: 95%;
+  margin-right: 10px;
   font-weight: 300;
+}
+
+.header-nav-link:hover .howToUse-icon {
+  color: #707070;
 }
 
 
@@ -160,14 +174,14 @@ body {
   content: "";
   background-color: #FFFFFF;
   display: inline-block;
-  height: 29px;
-  width: 29px;
+  height: 27px;
+  width: 27px;
   -webkit-mask: url("../img/icon_pen.svg");
   mask: url("../img/icon_pen.svg");
   -webkit-mask-size: cover;
   mask-size: cover;
   vertical-align: middle;
-  margin: -7px 7px 0 0;
+  margin: -8px 7px 0 0;
 }
 
 .button-generate:hover {
@@ -190,7 +204,7 @@ body {
 }
 
 .is-loading:before {
-  margin: -7px 7px 0 -10px;
+  margin: -8px 7px 0 -10px;
   background-color: #FFFFFF;
 }
 
@@ -263,7 +277,6 @@ body {
   transition: 1s opacity ease-out;
   */
   filter: blur(8px);
-
 }
 
 .canvas-cover {
@@ -273,8 +286,13 @@ body {
   top: 0;
   left: 0;
   z-index: -888;
+  background: rgb(255, 255, 255);
+  opacity: 0.75;
+  transition: opacity 1s;   /* 1sec waiting */
+}
 
-  background: rgba(255, 255, 255, .7);
+.canvas-cover.is-changing {
+  opacity: 1;
 }
 
 
@@ -652,7 +670,7 @@ body {
 
 .howToUse-description {
   width: 980px;
-  margin: 20px auto;
+  margin: 30px auto;
 }
 
 .howToUse-step {
@@ -677,13 +695,14 @@ body {
 
 .contact-description {
   font-size: 14px;
+  line-height: 1.4;
 }
 
 .modal-button-close {
   position: relative;
   width: 60px;
   height: 60px;
-  margin: 60px auto 0px;
+  margin: 70px auto 0px;
   padding: 20px;
   border-radius: 30px;
   text-align: center;
