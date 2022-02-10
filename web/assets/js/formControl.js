@@ -705,7 +705,7 @@ function connect(){
   };
 
   connection.onmessage = function (e) {  
-    //console.log(e.data);
+    console.log(e.data);
     var scentData = e.data;
     
     if(is_json(scentData)) {
@@ -757,7 +757,11 @@ function connect(){
   };
 }
 
-connect();
+//document.addEventListener('DOMContentLoaded', function() {
+  connect();
+
+//});
+
 
 
 let is_json = data => {

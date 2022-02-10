@@ -221,7 +221,8 @@ void sensor_loop() {
 
   
   // Hueの光変更制御
-  if( (wifiMulti.run() == WL_CONNECTED) && hue_scene_new != hue_scene_current ) {
+  //if( (wifiMulti.run() == WL_CONNECTED) && hue_scene_new != hue_scene_current ) {
+  if( hue_scene_new != hue_scene_current ) {
 
     HTTPClient http;
 

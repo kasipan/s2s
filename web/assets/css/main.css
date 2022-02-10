@@ -70,15 +70,27 @@ body {
   font-size: 95%;
   margin-right: 10px;
   font-weight: 300;
-}
-
-.header-nav-link:hover .howToUse-icon {
   color: #707070;
 }
+
+/*.header-nav-link:hover .howToUse-icon {
+  color: #707070;
+}*/
 
 
 /* Main Area Common Settings ----------------------- */
 .main {
+  /*min-height: 100%;*/
+}
+
+#fadeInContent {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: opacity 2.5s, transform 2.5s;
+}
+#fadeInContent.is-shown{
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .form-wrapper {
@@ -86,7 +98,8 @@ body {
   margin: 204px auto 184px;
   display: flex;
   justify-content: space-between;
-  opacity: 0.8;
+  /*opacity: 0.8;*/
+  opacity: 0.9;
 }
 
 .input-text-wrapper {
@@ -140,15 +153,17 @@ body {
   align-items: center;
   text-align: center;
   margin: 200px auto 200px;
+  /*padding: 200px auto;*/
 }
 
 .title-logo {
   width: 346px;
-  margin: 0 auto 50px;
+  margin: 0 auto 40px;
 }
 
 .title-description {
-  margin-bottom: 70px;
+  margin-bottom: 60px;
+  line-height: 2.0;
 }
 
 .title-button {
@@ -237,7 +252,7 @@ body {
   padding: 30px;
   text-align: center;
   line-height: 2.0;
-  background: rgba(255, 255, 255, .7);
+  background: rgba(255, 255, 255, .9);
   border-radius: 10px;
   font-size: 16px;
   color: #a0a0a0;
@@ -336,7 +351,7 @@ body {
 
 .link-scrollToBottom {
   position: absolute;
-  top: 900px;
+  top: 800px;
   left: 50%;
   display: inline-block;
   height: 50px;
@@ -348,7 +363,7 @@ body {
 .link-scrollToBottom:before {
   content: '';
   position: absolute;
-  left: 0;
+  left: 14%;
   bottom: 0;
   display: inline-block;
   width: 34.5px;
@@ -360,7 +375,7 @@ body {
 .link-scrollToBottom:after {
   content: '';
   position: absolute;
-  right: 0;
+  right: 14%;
   bottom: 0;
   display: inline-block;
   width: 34.5px;
@@ -655,12 +670,14 @@ body {
   left: 0;
   z-index: -1000;
   opacity: 0;
-  transition: opacity 0.5s, z-index 0.5s;
+  visibility: hidden;
+  transition: visibility 0.5s, opacity 0.5s, z-index 0.5s;
 }
 
 .modal-howToUse.is-activeModal {
   z-index: 9999;
   opacity: 1;
+  visibility: visible;
 }
 
 .howToUse-title {
@@ -747,7 +764,7 @@ body {
   html {
     transform: scale(0.5);
     transform-origin: 14px 10px;
-    height: 300px;
+    height: 0px;
   }
 
   body {
@@ -762,7 +779,7 @@ body {
 
   .myStory-wrapper-print.myStory-wrapper {
     margin: 0;
-    padding: 50px 20px 30px;
+    padding: 40px 20px 20px;
   }
 
 }

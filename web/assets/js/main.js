@@ -41,6 +41,20 @@ function UsageToggleClick(e){
 
 
 window.onload = (event) => {
+  // adjust too much long story
+  const stories_texts = document.querySelectorAll('.myStory-body > p, .othersStory-body > p');
+  if(stories_texts){
+    const mojisuu = 170;  //170文字超えたら削る
+    for (i = 0; i < stories_texts.length; i++) {
+      if(stories_texts[i].innerText.length > mojisuu) {
+        var str = stories_texts[i].innerText;
+        str = str.substr(0,(mojisuu-1));
+        stories_texts[i].innerText = str + "…";
+      }
+    }
+  }
+
+
   // for others' stories animation --------
   const stories_columns = document.querySelectorAll('.othersStories-column');
   if(stories_columns){
@@ -50,3 +64,17 @@ window.onload = (event) => {
     });
   }
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+  // fade start animation
+  const fadeContent = document.getElementById('fadeInContent');
+  if(fadeContent){
+    //fadeContent.classList.add('is-hidden');
+    setTimeout(
+      function(){ 
+        fadeContent.classList.add('is-shown');
+      }
+    , 750);
+  }
+});
+
