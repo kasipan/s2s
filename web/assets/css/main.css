@@ -80,7 +80,6 @@ body {
 
 /* Main Area Common Settings ----------------------- */
 .main {
-  /*min-height: 100%;*/
 }
 
 #fadeInContent {
@@ -580,7 +579,7 @@ body {
 .mixStoriesIntro-description-text {
   font-size: 24px;
   margin: 110px auto;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .button-mix {
